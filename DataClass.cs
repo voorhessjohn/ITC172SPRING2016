@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-//libraries nee ot talk to database
+//libraries need to talk to database
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
@@ -27,9 +27,30 @@ public class DataClass
 
         string sql = "Select GrantTypeKey, GrantTypeName from GrantType";
         SqlCommand cmd = new SqlCommand(sql, connect);
-        SqlDataReader reader = null;
-        tbl = new DataTable();
     
+        tbl = ReadData(cmd);
+    
+        return tbl;
+    }
+
+    public DataTable GetGrants(int grantTypeKey)
+    {
+        DataTable tbl = null;
+        string sql = "Select GrantRequestDate, GrantRequestExplanation, GrantRequestAmount from GrantRequest Where GrantTypeKey = @Key";
+
+        SqlCommand cmd = new SqlCommand(sql, connect);
+        cmd.Parameters.AddWithValue("@Key", grantTypeKey);
+
+        tbl = ReadData(cmd);
+
+        return tbl;
+    }
+
+    private DataTable ReadData(SqlCommand cmd)
+    {
+        SqlDataReader reader = null;
+        DataTable tbl = new DataTable();
+
 
         connect.Open();
         reader = cmd.ExecuteReader();
