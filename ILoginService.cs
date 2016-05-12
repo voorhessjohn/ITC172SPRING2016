@@ -15,3 +15,5 @@ public interface ILoginService
     [OperationContract]
     int ReviewerLogin(string userName, string password);
 }
+
+//FOR ASSIGNMENT - MAKE DATA CONTRACT. TESTER WONT WORK WITHOUT IT.
