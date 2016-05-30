@@ -1,0 +1,22 @@
+Select Web Client Test Document
+John Voorhess
+
+Lists all the venues
+Expected Result - Lists two venues in dropdown
+Actual Result - Lists two venues in dropdown
+
+List all the artists
+Expected Result - Lists seven artists in dropdown
+Actual Result - Lists seven artists in dropdown
+
+Lists all the shows
+Expected Result - Lists five shows
+Actual Result - Lists five shows
+
+Lets the user select a venue and see all the shows
+Expected - Select "Comet" return two shows
+Actual - Select "Comet" returns two shows.
+
+Lets the user select an artist and see all the shows
+Expected - Select "Taj Mahal" returns a show at Jazz Alley
+Actual - Select "Taj Mahal" returns Jazz Alley show because it works
