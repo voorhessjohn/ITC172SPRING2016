@@ -1,0 +1,14 @@
+Login Registration Service TEST DOCUMENT
+John Voorhess
+
+Allow a venue to register:
+Registered a fake venue: FRED
+Succeeded - returned "true"
+Checked SQL server and found Fred registered as venue #3
+
+Allow a venue to log in:
+Logged in Fred with his credentials from the registration.
+Returned "3"
+This is evidence of success as Fred's venue number is "3".
+
+Success all around.  Thanks for the help in class.
