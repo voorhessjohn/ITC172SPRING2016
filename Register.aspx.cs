@@ -39,7 +39,7 @@ public partial class Register : System.Web.UI.Page
         vl.VenueLoginUserName = VenueLoginUserNameTextBox.Text;
         vl.VenueLoginPasswordPlain = VenueLoginPasswordPlainTextBox.Text;
 
-        bool result = lsc.RegisterVenue(v, vl); 
+        bool result = lsc.RegisterVenue(v, vl); //there's no error here. there wasn't one in the first place. Weird.
 
         if (result)
         {
