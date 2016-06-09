@@ -18,7 +18,7 @@
                 <asp:TextBox ID="ShowNameTextBox" runat="server"></asp:TextBox>
             </td>
             <td>
-               
+               <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ShowNameTextBox" ErrorMessage="Show Name Is Required"></asp:RequiredFieldValidator>
             </td>
         </tr>
         
@@ -27,7 +27,9 @@
             <td>
                 <asp:TextBox ID="ShowDateTextBox" runat="server"></asp:TextBox>
             </td>
-            <td></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ShowDateTextBox" ErrorMessage="Show Date Is Required"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>ShowTicketInfo</td>
@@ -42,14 +44,18 @@
             <td>
                 <asp:TextBox ID="ArtistKeyTextBox" runat="server"></asp:TextBox>
             </td>
-            <td></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ArtistKeyTextBox" ErrorMessage="Artist Key Is Required"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>ShowDetail Artist Start Time</td>
             <td>
                 <asp:TextBox ID="ShowDetailArtistStartTimeTextBox" runat="server"></asp:TextBox>
             </td>
-            <td></td>
+            <td>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ShowDetailArtistStartTimeTextBox" ErrorMessage="Artist Start Time Is Required"></asp:RequiredFieldValidator>
+            </td>
         </tr>
         <tr>
             <td>Show Detail Additional</td>
